@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Immigration + Race Mixing Fetish • The Cutest Solution</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&family=Nunito:wght@400;700&display=swap');
+
+        :root { --pink: #ff69b4; --light-pink: #fff0f8; }
+
+        * { margin:0; padding:0; box-sizing:border-box; }
+        body {
+            background: linear-gradient(135deg, #fff0f8, #fce7f3, #f8d1e8);
+            color: #5c2a5c;
+            font-family: 'Comic Neue', cursive;
+            line-height: 1.65;
+            overflow-x: hidden;
+        }
+        header {
+            background: linear-gradient(135deg, rgba(248,193,232,0.4), rgba(248,209,232,0.4));
+            padding: 1.8rem 0;
+            text-align: center;
+            border-bottom: 8px solid var(--pink);
+        }
+        .logo {
+            font-family: 'Nunito', sans-serif;
+            font-size: clamp(1.8rem, 7vw, 3.2rem);
+            color: var(--pink);
+            display: flex; align-items: center; justify-content: center; gap: 12px;
+            flex-wrap: wrap;
+        }
+        .tagline { font-size: clamp(1.1rem, 4vw, 1.5rem); color: var(--pink); font-weight: 700; margin-top: 0.3rem; }
+
+        nav {
+            position: sticky; top: 0; background: rgba(255,240,248,0.98);
+            padding: 0.9rem 0.5rem; z-index: 1000; border-bottom: 4px solid var(--pink);
+            display: flex; justify-content: center; flex-wrap: wrap; gap: 0.4rem;
+        }
+        nav a {
+            color: var(--pink); text-decoration: none; font-weight: 700;
+            font-family: 'Nunito', sans-serif; padding: 0.55rem 0.9rem; border-radius: 50px;
+            font-size: 0.95rem; white-space: nowrap;
+        }
+        nav a:hover { background: var(--pink); color: white; }
+
+        section { padding: 2.8rem 1rem; max-width: 1200px; margin: 0 auto; }
+        h2 { font-family: 'Nunito', sans-serif; font-size: clamp(1.8rem, 6vw, 2.3rem); color: var(--pink); text-align: center; margin-bottom: 1.4rem; }
+
+        .image-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 1.4rem;
+        }
+        .image-box {
+            position: relative;
+            border: 5px solid var(--pink);
+            overflow: hidden;
+            border-radius: 16px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+        }
+        .image-box img { width: 100%; display: block; }
+
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 1.2rem;
+        }
+        .video-card {
+            background: #fff0f8;
+            border: 5px solid var(--pink);
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+            position: relative;
+        }
+        .video-wrapper { position: relative; background: #000; }
+        .video-wrapper video { width: 100%; display: block; height: auto; }
+        /* Suppress native fullscreen button in supporting browsers */
+        .video-wrapper video::-webkit-media-controls-fullscreen-button,
+        .video-wrapper video::-webkit-media-controls-panel { display: none !important; }
+
+        /* Custom play button overlay — always covers video to block native touch/fullscreen */
+        .play-overlay {
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(0,0,0,0.25);
+            z-index: 5;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        .play-overlay.playing {
+            background: transparent;
+        }
+        .play-overlay:not(.playing):hover {
+            background: rgba(0,0,0,0.15);
+        }
+        .play-btn {
+            width: 70px;
+            height: 70px;
+            background: var(--pink);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.2rem;
+            color: white;
+            box-shadow: 0 4px 15px rgba(255,105,180,0.5);
+        }
+
+        .ribbon {
+            position: absolute; top: 10px; left: 10px;
+            background: var(--pink); color: white;
+            padding: 4px 11px; font-size: 0.8rem; font-weight: 700;
+            font-family: 'Nunito', sans-serif; transform: rotate(-11deg);
+            box-shadow: 3px 3px 0 #c2185b; z-index: 10; border-radius: 4px;
+        }
+        .euro-flag { position: absolute; top: 10px; right: 10px; font-size: 1.5rem; z-index: 10; }
+        .bow { position: absolute; top: 12px; right: 42px; font-size: 1.85rem; z-index: 10; }
+        .heart {
+            position: absolute; font-size: 1.3rem; z-index: 9;
+            animation: floatHeart 3.5s ease-in-out infinite;
+        }
+        @keyframes floatHeart {
+            0%,100% { transform: translateY(0) rotate(-6deg); }
+            50% { transform: translateY(-14px) rotate(6deg); }
+        }
+        .video-caption { padding: 0.9rem 1rem; background: #fff0f8; }
+        .video-caption p { font-size: 0.95rem; margin-bottom: 0.3rem; }
+        .video-caption .quote { font-style: italic; font-size: 0.93rem; line-height: 1.4; }
+
+        .pill {
+            background: #fff0f8; border: 6px solid var(--pink);
+            padding: 2.2rem 1.8rem; max-width: 880px; margin: 2.5rem auto;
+            border-radius: 20px; box-shadow: 0 0 40px rgba(255,105,180,0.3);
+        }
+        footer {
+            background: linear-gradient(#f8c1e8, #f8d1e8);
+            text-align: center; padding: 2.5rem 1rem;
+            color: var(--pink); border-top: 8px solid var(--pink); font-size: 0.95rem;
+        }
+
+        /* Floating Rain Button */
+        #rain-btn {
+            position: fixed;
+            bottom: 22px;
+            right: 22px;
+            background: var(--pink);
+            color: white;
+            border: none;
+            width: 58px;
+            height: 58px;
+            border-radius: 50%;
+            font-size: 1.9rem;
+            z-index: 2147483647;
+            box-shadow: 0 8px 25px rgba(255,105,180,0.6);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="logo">
+        <span>IMMIGRATION + RACE MIXING FETISH</span>
+        <span style="font-size:2.4rem;">🇪🇺</span>
+    </div>
+    <div class="tagline">THE CUTEST SOLUTION EVER 💕🎀</div>
+</header>
+
+<nav>
+    <a href="#intro">INTRO</a>
+    <a href="#images">PICTURES</a>
+    <a href="#real-testimonials">TESTIMONIALS</a>
+    <a href="#intimate">INTIMATE</a>
+    <a href="#numbers">NUMBERS</a>
+    <a href="#final">FINAL</a>
+</nav>
+
+<section id="intro">
+    <h2>The Big Picture 🇪🇺💕</h2>
+    <p style="max-width:720px;margin:0 auto;font-size:1.2rem;text-align:center;">
+        Real European women living their happiest life.
+    </p>
+</section>
+
+<!-- Picture Scenarios -->
+<section id="images">
+    <h2>Picture Scenarios</h2>
+    <div class="image-grid">
+        <!-- All 4 images with hearts, bows & Euro flags -->
+        <div class="image-box">
+            <img src="https://files.catbox.moe/so1nig.jpeg" alt="Scenario 1">
+            <div style="position:absolute;inset:0;background:linear-gradient(45deg,rgba(255,105,180,0.12),rgba(255,182,193,0.22));"></div>
+            <div class="ribbon">CUTE START 💕</div>
+            <div class="bow">🎀</div>
+            <div class="heart" style="top:28%;left:12%;">❤️</div>
+            <div class="heart" style="top:55%;left:78%;animation-delay:1.4s;">💕</div>
+            <div style="position:absolute;top:12%;right:15%;font-size:1.6rem;">🇪🇺</div>
+            <p style="padding:10px;text-align:center;background:#fff0f8;font-size:0.98rem;">Scenario 1: Happy beginning</p>
+        </div>
+
+        <div class="image-box">
+            <img src="https://files.catbox.moe/uk6p09.jpeg" alt="Scenario 2">
+            <div style="position:absolute;inset:0;background:linear-gradient(45deg,rgba(255,105,180,0.12),rgba(255,182,193,0.22));"></div>
+            <div class="ribbon">PERFECT PAIR 💕</div>
+            <div class="bow">🎀</div>
+            <div class="heart" style="top:22%;left:14%;">❤️</div>
+            <div class="heart" style="top:52%;left:78%;animation-delay:1.6s;">💕</div>
+            <div style="position:absolute;top:12%;right:15%;font-size:1.6rem;">🇪🇺</div>
+            <p style="padding:10px;text-align:center;background:#fff0f8;font-size:0.98rem;">Scenario 2: The perfect moment</p>
+        </div>
+
+        <div class="image-box">
+            <img src="https://files.catbox.moe/57w7e1.jpeg" alt="Scenario 3">
+            <div style="position:absolute;inset:0;background:linear-gradient(45deg,rgba(255,105,180,0.12),rgba(255,182,193,0.22));"></div>
+            <div class="ribbon">FUTURE BABIES 🎀</div>
+            <div class="bow">🎀</div>
+            <div class="heart" style="top:25%;left:12%;">❤️</div>
+            <div class="heart" style="top:50%;left:80%;animation-delay:1.5s;">💕</div>
+            <div style="position:absolute;top:12%;right:15%;font-size:1.6rem;">🇪🇺</div>
+            <p style="padding:10px;text-align:center;background:#fff0f8;font-size:0.98rem;">Scenario 3: Happy mixed kids</p>
+        </div>
+
+        <div class="image-box">
+            <img src="https://files.catbox.moe/bwvk7q.jpeg" alt="Scenario 4">
+            <div style="position:absolute;inset:0;background:linear-gradient(45deg,rgba(255,105,180,0.12),rgba(255,182,193,0.22));"></div>
+            <div class="ribbon">HAPPY ENDING 💕</div>
+            <div class="bow">🎀</div>
+            <div class="heart" style="top:20%;left:12%;">❤️</div>
+            <div class="heart" style="top:55%;left:78%;animation-delay:1.7s;">💕</div>
+            <div style="position:absolute;top:12%;right:15%;font-size:1.6rem;">🇪🇺</div>
+            <p style="padding:10px;text-align:center;background:#fff0f8;font-size:0.98rem;">Scenario 4: The happy ending</p>
+        </div>
+    </div>
+</section>
+
+<!-- Real Testimonials - Custom controls (no native fullscreen) -->
+<section id="real-testimonials">
+    <h2>Real Stories 💕🇪🇺</h2>
+    <div class="video-grid">
+        <!-- Video 1 -->
+        <div class="video-card">
+            <div class="video-wrapper">
+                <video playsinline webkit-playsinline disablePictureInPicture controlsList="nofullscreen nodownload" style="width:100%;">
+                    <source src="https://files.catbox.moe/7tqxi4.mp4" type="video/mp4">
+                </video>
+                <div class="play-overlay" onclick="toggleVideo(this)">
+                    <div class="play-btn">▶</div>
+                </div>
+                <div class="ribbon">REAL STORY 💕</div>
+                <div class="euro-flag">🇪🇺</div>
+                <div class="bow">🎀</div>
+            </div>
+            <div class="video-caption">
+                <p><strong>Sophie, 29 • Paris 🇫🇷</strong></p>
+                <p class="quote">"Since I met my African partner and we had our baby, I finally feel complete."</p>
+            </div>
+        </div>
+
+        <!-- Video 2 -->
+        <div class="video-card">
+            <div class="video-wrapper">
+                <video playsinline webkit-playsinline disablePictureInPicture controlsList="nofullscreen nodownload" style="width:100%;">
+                    <source src="https://files.catbox.moe/jio6ab.mp4" type="video/mp4">
+                </video>
+                <div class="play-overlay" onclick="toggleVideo(this)">
+                    <div class="play-btn">▶</div>
+                </div>
+                <div class="ribbon">REAL STORY 💕</div>
+                <div class="euro-flag">🇪🇺</div>
+                <div class="bow">🎀</div>
+            </div>
+            <div class="video-caption">
+                <p><strong>Lena, 31 • Berlin 🇩🇪</strong></p>
+                <p class="quote">"Now with my African man I feel seen, desired, and happy every single day."</p>
+            </div>
+        </div>
+
+        <!-- Video 3 -->
+        <div class="video-card">
+            <div class="video-wrapper">
+                <video playsinline webkit-playsinline disablePictureInPicture controlsList="nofullscreen nodownload" style="width:100%;">
+                    <source src="https://files.catbox.moe/c71eem.mp4" type="video/mp4">
+                </video>
+                <div class="play-overlay" onclick="toggleVideo(this)">
+                    <div class="play-btn">▶</div>
+                </div>
+                <div class="ribbon">REAL STORY 💕</div>
+                <div class="euro-flag">🇪🇺</div>
+                <div class="bow">🎀</div>
+            </div>
+            <div class="video-caption">
+                <p><strong>Elsa, 26 • Stockholm 🇸🇪</strong></p>
+                <p class="quote">"Having a baby with my African partner feels like the most natural and beautiful thing."</p>
+            </div>
+        </div>
+
+        <!-- Add the remaining 4 testimonial videos using the exact same structure as above -->
+        <!-- (Giulia, Lotte, Camila, Olivia - copy the video-card block and change src + caption) -->
+    </div>
+</section>
+
+<!-- Intimate Moments - Custom controls -->
+<section id="intimate">
+    <h2>Private Intimate Moments 💕</h2>
+    <div class="video-grid">
+        <div class="video-card">
+            <div class="video-wrapper">
+                <video playsinline webkit-playsinline disablePictureInPicture controlsList="nofullscreen nodownload" style="width:100%;">
+                    <source src="https://files.catbox.moe/dfd7qz.mp4" type="video/mp4">
+                </video>
+                <div class="play-overlay" onclick="toggleVideo(this)">
+                    <div class="play-btn">▶</div>
+                </div>
+                <div class="ribbon">INTIMATE 💕</div>
+                <div class="euro-flag">🇪🇺</div>
+                <div class="bow">🎀</div>
+            </div>
+            <div class="video-caption">
+                <p class="quote">Real passionate moment between a European woman and her African partner.</p>
+            </div>
+        </div>
+
+        <div class="video-card">
+            <div class="video-wrapper">
+                <video playsinline webkit-playsinline disablePictureInPicture controlsList="nofullscreen nodownload" style="width:100%;">
+                    <source src="https://files.catbox.moe/hf5y0p.mp4" type="video/mp4">
+                </video>
+                <div class="play-overlay" onclick="toggleVideo(this)">
+                    <div class="play-btn">▶</div>
+                </div>
+                <div class="ribbon">INTIMATE 💕</div>
+                <div class="euro-flag">🇪🇺</div>
+                <div class="bow">🎀</div>
+            </div>
+            <div class="video-caption">
+                <p class="quote">Beautiful intimate connection — the foundation of our future.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="numbers">
+    <h2>The Numbers</h2>
+    <p style="text-align:center; font-size:1.15rem;">Africa ~4.0 • Europe 1.41 • The only math that works.</p>
+</section>
+
+<section id="final">
+    <div class="pill">
+        <h2 style="color:#ff69b4;">The Final Cute Solution</h2>
+        <p style="font-size:1.15rem; text-align:center;">
+            These women chose happiness.<br>
+            Open borders + love + mixed babies = the cutest future.
+        </p>
+    </div>
+</section>
+
+<footer>
+    <p>Real women. Real love. The cutest solution is happening now.</p>
+</footer>
+
+<!-- Floating Rain Button -->
+<button id="rain-btn" onclick="makeItRainHearts()" title="Rain hearts &amp; Euro flags">💕</button>
+
+<script>
+    // Toggle play/pause — overlay stays visible (transparent) to block native fullscreen on mobile
+    function toggleVideo(overlay) {
+        const video = overlay.parentElement.querySelector('video');
+        const playBtn = overlay.querySelector('.play-btn');
+
+        if (video.paused) {
+            video.play();
+            overlay.classList.add('playing');
+            playBtn.style.display = 'none';
+        } else {
+            video.pause();
+            overlay.classList.remove('playing');
+            playBtn.style.display = 'flex';
+            playBtn.innerHTML = '▶';
+        }
+
+        video.onended = function() {
+            overlay.classList.remove('playing');
+            playBtn.style.display = 'flex';
+            playBtn.innerHTML = '▶';
+        };
+    }
+
+    // Force-exit fullscreen if it is ever triggered (belt-and-suspenders for mobile browsers)
+    function exitFullscreenIfActive() {
+        if (document.fullscreenElement) document.exitFullscreen();
+        else if (document.webkitFullscreenElement) document.webkitExitFullscreen();
+    }
+    document.addEventListener('fullscreenchange', exitFullscreenIfActive);
+    document.addEventListener('webkitfullscreenchange', exitFullscreenIfActive);
+    document.querySelectorAll('video').forEach(function(v) {
+        v.addEventListener('webkitbeginfullscreen', function() { v.webkitExitFullscreen && v.webkitExitFullscreen(); });
+    });
+
+    // All European flags rain
+    function makeItRainHearts() {
+        const items = [
+            '❤️','💕','💖','🩷','🎀',
+            '🇪🇺','🇫🇷','🇩🇪','🇮🇹','🇪🇸','🇳🇱','🇸🇪','🇫🇮','🇬🇧','🇧🇪',
+            '🇵🇹','🇬🇷','🇦🇹','🇨🇭','🇩🇰','🇳🇴','🇮🇪','🇵🇱','🇨🇿','🇭🇺',
+            '🇷🇴','🇧🇬','🇭🇷','🇸🇰','🇸🇮','🇱🇹','🇱🇻','🇪🇪','🇨🇾','🇲🇹','🇱🇺'
+        ];
+
+        for (let i = 0; i < 65; i++) {
+            setTimeout(() => {
+                const el = document.createElement('div');
+                el.style.position = 'fixed';
+                el.style.left = Math.random() * 100 + 'vw';
+                el.style.top = '-70px';
+                el.style.fontSize = (Math.random() * 1.7 + 1.3) + 'rem';
+                el.style.zIndex = '2147483647';
+                el.style.pointerEvents = 'none';
+                el.style.opacity = Math.random() * 0.5 + 0.65;
+                el.innerHTML = items[Math.floor(Math.random() * items.length)];
+                document.body.appendChild(el);
+
+                const duration = Math.random() * 3000 + 3500;
+                const drift = (Math.random() - 0.5) * 240;
+
+                requestAnimationFrame(() => {
+                    el.style.transition = `transform ${duration}ms linear, opacity ${duration}ms linear`;
+                    el.style.transform = `translateY(${window.innerHeight + 200}px) translateX(${drift}px) rotate(${Math.random()*130 - 65}deg)`;
+                    el.style.opacity = '0';
+                });
+
+                setTimeout(() => el.remove(), duration + 400);
+            }, i * 3);
+        }
+    }
+
+    // Keyboard shortcut (H key)
+    document.addEventListener('keydown', function(e) {
+        if (e.key.toLowerCase() === 'h') {
+            makeItRainHearts();
+        }
+    });
+
+    // Gentle rain on page load
+    setTimeout(() => {
+        makeItRainHearts();
+    }, 1500);
+</script>
+
+</body>
+</html>
