@@ -370,13 +370,19 @@
 <button id="rain-btn" onclick="makeItRainHearts()" title="Rain hearts &amp; Euro flags">💕</button>
 
 <script>
-    // Toggle play/pause — overlay stays visible (transparent) to block native fullscreen on mobile
+    // Toggle play/pause — overlay stays visible (transparent) to block native touch/fullscreen
     function toggleVideo(overlay) {
         const video = overlay.parentElement.querySelector('video');
         const playBtn = overlay.querySelector('.play-btn');
 
         if (video.paused) {
-            video.play();
+            var p = video.play();
+            if (p && p.catch) {
+                p.catch(function() {
+                    overlay.classList.remove('playing');
+                    playBtn.style.display = 'flex';
+                });
+            }
             overlay.classList.add('playing');
             playBtn.style.display = 'none';
         } else {
@@ -393,20 +399,31 @@
         };
     }
 
-    // Force-exit fullscreen if triggered by any browser mechanism
+    // Stub out every fullscreen entry method on each video so the browser
+    // cannot enter fullscreen regardless of which code path triggers it
+    var fsStub = function() { return Promise.resolve(); };
+    var fsMethods = [
+        'requestFullscreen', 'webkitRequestFullscreen',
+        'webkitEnterFullscreen', 'webkitEnterFullScreen',
+        'mozRequestFullScreen', 'msRequestFullscreen'
+    ];
+    document.querySelectorAll('video').forEach(function(v) {
+        fsMethods.forEach(function(m) {
+            try {
+                Object.defineProperty(v, m, { value: fsStub, writable: false, configurable: false });
+            } catch(e) {}
+        });
+        // Seek to first frame so thumbnail is never black
+        v.addEventListener('loadedmetadata', function() { v.currentTime = 0.001; });
+    });
+
+    // Belt-and-suspenders: exit fullscreen immediately if somehow entered
     function exitFullscreenIfActive() {
         if (document.fullscreenElement) document.exitFullscreen();
         else if (document.webkitFullscreenElement) document.webkitExitFullscreen();
     }
     document.addEventListener('fullscreenchange', exitFullscreenIfActive);
     document.addEventListener('webkitfullscreenchange', exitFullscreenIfActive);
-
-    // Seek to first frame on metadata load so thumbnail is never black
-    document.querySelectorAll('video').forEach(function(v) {
-        v.addEventListener('loadedmetadata', function() {
-            v.currentTime = 0.001;
-        });
-    });
 
     // All European flags rain
     function makeItRainHearts() {
