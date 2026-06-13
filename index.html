@@ -248,7 +248,7 @@
         <!-- Video 1 -->
         <div class="video-card">
             <div class="video-wrapper">
-                <video playsinline webkit-playsinline disablePictureInPicture controlsList="nofullscreen nodownload" style="width:100%;">
+                <video playsinline webkit-playsinline disablePictureInPicture controlsList="nofullscreen nodownload" preload="metadata" style="width:100%;">
                     <source src="https://files.catbox.moe/7tqxi4.mp4" type="video/mp4">
                 </video>
                 <div class="play-overlay" onclick="toggleVideo(this)">
@@ -267,7 +267,7 @@
         <!-- Video 2 -->
         <div class="video-card">
             <div class="video-wrapper">
-                <video playsinline webkit-playsinline disablePictureInPicture controlsList="nofullscreen nodownload" style="width:100%;">
+                <video playsinline webkit-playsinline disablePictureInPicture controlsList="nofullscreen nodownload" preload="metadata" style="width:100%;">
                     <source src="https://files.catbox.moe/jio6ab.mp4" type="video/mp4">
                 </video>
                 <div class="play-overlay" onclick="toggleVideo(this)">
@@ -286,7 +286,7 @@
         <!-- Video 3 -->
         <div class="video-card">
             <div class="video-wrapper">
-                <video playsinline webkit-playsinline disablePictureInPicture controlsList="nofullscreen nodownload" style="width:100%;">
+                <video playsinline webkit-playsinline disablePictureInPicture controlsList="nofullscreen nodownload" preload="metadata" style="width:100%;">
                     <source src="https://files.catbox.moe/c71eem.mp4" type="video/mp4">
                 </video>
                 <div class="play-overlay" onclick="toggleVideo(this)">
@@ -313,7 +313,7 @@
     <div class="video-grid">
         <div class="video-card">
             <div class="video-wrapper">
-                <video playsinline webkit-playsinline disablePictureInPicture controlsList="nofullscreen nodownload" style="width:100%;">
+                <video playsinline webkit-playsinline disablePictureInPicture controlsList="nofullscreen nodownload" preload="metadata" style="width:100%;">
                     <source src="https://files.catbox.moe/dfd7qz.mp4" type="video/mp4">
                 </video>
                 <div class="play-overlay" onclick="toggleVideo(this)">
@@ -330,7 +330,7 @@
 
         <div class="video-card">
             <div class="video-wrapper">
-                <video playsinline webkit-playsinline disablePictureInPicture controlsList="nofullscreen nodownload" style="width:100%;">
+                <video playsinline webkit-playsinline disablePictureInPicture controlsList="nofullscreen nodownload" preload="metadata" style="width:100%;">
                     <source src="https://files.catbox.moe/hf5y0p.mp4" type="video/mp4">
                 </video>
                 <div class="play-overlay" onclick="toggleVideo(this)">
@@ -393,15 +393,19 @@
         };
     }
 
-    // Force-exit fullscreen if it is ever triggered (belt-and-suspenders for mobile browsers)
+    // Force-exit fullscreen if triggered by any browser mechanism
     function exitFullscreenIfActive() {
         if (document.fullscreenElement) document.exitFullscreen();
         else if (document.webkitFullscreenElement) document.webkitExitFullscreen();
     }
     document.addEventListener('fullscreenchange', exitFullscreenIfActive);
     document.addEventListener('webkitfullscreenchange', exitFullscreenIfActive);
+
+    // Seek to first frame on metadata load so thumbnail is never black
     document.querySelectorAll('video').forEach(function(v) {
-        v.addEventListener('webkitbeginfullscreen', function() { v.webkitExitFullscreen && v.webkitExitFullscreen(); });
+        v.addEventListener('loadedmetadata', function() {
+            v.currentTime = 0.001;
+        });
     });
 
     // All European flags rain
